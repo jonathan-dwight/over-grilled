@@ -8,7 +8,7 @@ console.log("we connected");
 document.addEventListener("DOMContentLoaded", function () {
   var startButton = document.getElementById('start-button');
   startButton.addEventListener('click', function () {
-    document.getElementById('introduction').classList.add('hidden');
+    document.getElementById('intro-container').classList.add('hidden');
   });
 });
 /******/ })()

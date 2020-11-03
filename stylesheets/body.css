@@ -47,7 +47,7 @@ button {
   display: none;
 }
 
-.modal-screen, #introduction {
+.modal-screen, #intro-container {
   z-index: 998;
   position: fixed;
   top: 0%;
@@ -55,4 +55,24 @@ button {
   left: 0%;
   right: 0%;
   background: rgba(0, 0, 0, .3);
+}
+
+#intro-content {
+   width: 500px;
+   height: 300px;
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+   right: 50%;
+   bottom: 50px;
+   margin-left: -300px;
+   margin-top: -150px;
+   border: 1px solid;
+   background-color: white;
+   border-radius: 7px;
+}
+
+#intro-content h1 {
+    font-size: 38px;
+    text-align: center;
 }

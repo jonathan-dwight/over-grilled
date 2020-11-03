@@ -6,4 +6,55 @@
     left: 19%;
     top: 10%;
     margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#order-window {
+    width: 95%;
+    border: 1px solid black;
+    height: 55%;
+    align-self: center;
+    margin-top: 20px;
+}
+
+#order-creation {
+    width: 95%;
+    border: 1px solid black;
+    height: 35%;
+    align-self: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.plate-img {
+    width: 27%;
+    height: 27%;
+}
+
+#burger {
+    display: flex;
+    flex-direction: column;
+}
+
+#condiment-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+#burger-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.burger-item {
+  width: 75px;
+  height: 75px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }

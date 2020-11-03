@@ -63,9 +63,8 @@ button {
    position: absolute;
    left: 50%;
    top: 50%; 
-   right: 50%;
    bottom: 50px;
-   margin-left: -300px;
+   margin-left: -250px;
    margin-top: -150px;
    border: 1px solid;
    background-color: white;
@@ -75,4 +74,24 @@ button {
 #intro-content h1 {
     font-size: 38px;
     text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 42%;
+  align-self: center;
+}
+
+.logo-icon img {
+  height: 100px;
+  width: 100px
+}
+
+.game-header {
+  text-align: center;
+  /* margin-right: 100px; */
+  color: Black;
+  font-size: 88px;
+  padding-bottom: 10px;
 }

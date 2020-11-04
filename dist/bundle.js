@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var game = new _src_game__WEBPACK_IMPORTED_MODULE_0__.default();
   var startButton = document.getElementById('start-button');
   startButton.addEventListener('click', function () {
-    document.getElementById('intro-container').classList.add('hidden'); // game.start()
+    document.getElementById('intro-container').classList.add('hidden');
+    game.addClickToItems();
   }); // x, y, width, height
 });
 
@@ -49,12 +50,23 @@ var Game = /*#__PURE__*/function () {
   function Game() {
     _classCallCheck(this, Game);
 
+    this.order = [];
     this.start = this.start.bind(this);
   }
 
   _createClass(Game, [{
     key: "start",
     value: function start() {}
+  }, {
+    key: "addClickToItems",
+    value: function addClickToItems() {
+      var items = Array.from(document.getElementsByClassName('burger-item'));
+      items.forEach(function (item) {
+        item.addEventListener('click', function () {
+          console.log(item.id);
+        });
+      });
+    }
   }]);
 
   return Game;

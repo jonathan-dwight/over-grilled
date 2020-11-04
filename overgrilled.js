@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     startButton.addEventListener('click', () => {
         document.getElementById('intro-container').classList.add('hidden')
-        // game.start()
+        game.addClickToItems();
     })
     
     // x, y, width, height

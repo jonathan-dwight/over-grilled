@@ -26,16 +26,64 @@
     margin-top: 5px;
     margin-bottom: 10px;
     display: flex;
+    justify-content: space-between;
+    /* width: 50%; */
 }
 
+.order {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    
+}
+#submit-order {
+  padding: 0 10px;
+  height: 30px;
+  border-radius: 4px;
+  background: blue;
+  color: black;
+  font-size: 19px;
+  text-align: center;
+  position: relative;
+  width: 150px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+#clear-plate {
+  padding: 0 10px;
+  height: 30px;
+  border-radius: 4px;
+  background: red;
+  color: black;
+  font-size: 19px;
+  text-align: center;
+  position: relative;
+  width: 150px;
+  margin-left: 30px;
+}
+
+
+.plate {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    align-items: center;
+    width: 30%;
+}
 .plate-img {
-    width: 27%;
+    width: 60%;
     height: 27%;
 }
 
 #burger {
     display: flex;
     flex-direction: column;
+    margin-right: 46px;
+    margin-top: 10px;
+
 }
 
 #condiment-row {

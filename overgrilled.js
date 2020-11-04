@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     startButton.addEventListener('click', () => {
         document.getElementById('intro-container').classList.add('hidden')
         game.addClickToItems();
+        game.addClickToClearPlate();
     })
     
     // x, y, width, height

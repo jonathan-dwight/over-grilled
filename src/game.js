@@ -1,8 +1,9 @@
+import Burger from './burger'
 
 class Game {
     constructor () {
-
-        this.order = [];
+        this.burger = new Burger()
+        // this.order = [];
         this.start = this.start.bind(this)
     }
 
@@ -14,8 +15,15 @@ class Game {
         let items = Array.from(document.getElementsByClassName('burger-item'));
         items.forEach(item => {
             item.addEventListener('click', () => {
-                console.log(item.id)
+                this.burger.addIngredient(item.id)
             })
+        })
+    }
+
+    addClickToClearPlate() {
+        let button = document.getElementById('clear-plate')
+        button.addEventListener('click', () => {
+            this.burger.clearPlate()
         })
     }
 }

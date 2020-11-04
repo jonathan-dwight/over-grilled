@@ -17,12 +17,33 @@ console.log("we connected");
 
 document.addEventListener("DOMContentLoaded", function () {
   var game = new _src_game__WEBPACK_IMPORTED_MODULE_0__.default();
+  var timer = 60;
+  var isPlaying = true;
   var startButton = document.getElementById('start-button');
   startButton.addEventListener('click', function () {
     document.getElementById('intro-container').classList.add('hidden');
     game.addClickToItems();
     game.addClickToClearPlate();
-  }); // x, y, width, height
+    setInterval(time, 1000);
+    setInterval(gameStatus, 50);
+  });
+
+  function time() {
+    timer > 0 ? timer-- : isPlaying = false;
+    var countdown = document.getElementById('timer');
+    countdown.innerHTML = timer;
+  }
+
+  function gameStatus() {
+    if (!isPlaying && timer === 0) {
+      window.alert('Game Over');
+    }
+  }
+
+  function checker() {
+    setInterval(gameStatus, 50);
+  } // x, y, width, height
+
 });
 
 /***/ }),
@@ -54,7 +75,7 @@ var BURGER_ITEMS = {
   mustard: "../assets/mustard icon.jpg",
   beef: "../assets/beef patty.png",
   bottom_bun: "../assets/bottom bun.jpeg",
-  top_bun: "../assets/top bun.jpeg"
+  top_bun: "../assets/top-bun.png"
 };
 
 var Burger = /*#__PURE__*/function () {

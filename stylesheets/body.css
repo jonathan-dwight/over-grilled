@@ -101,3 +101,7 @@ body {
   font-size: 88px;
   /* padding-bottom: 10px; */
 }
+
+.timer {
+  background-color: black;
+}

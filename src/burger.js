@@ -5,7 +5,7 @@ const BURGER_ITEMS = {
     mustard: "../assets/mustard icon.jpg",
     beef: "../assets/beef patty.png",
     bottom_bun: "../assets/bottom bun.jpeg",
-    top_bun: "../assets/top bun.jpeg"
+    top_bun: "../assets/top-bun.png"
 }
 
 class Burger {

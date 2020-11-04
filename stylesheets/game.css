@@ -1,6 +1,6 @@
 #game-container {
     width: 900px;
-    height: 500px;
+    height: 650px;
     border: 2px solid black;
     position: relative;
     left: 19%;
@@ -8,6 +8,7 @@
     margin-top: 15px;
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 
 #order-window {
@@ -15,7 +16,7 @@
     border: 1px solid black;
     height: 55%;
     align-self: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 #order-creation {
@@ -24,7 +25,7 @@
     height: 35%;
     align-self: center;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     /* width: 50%; */
@@ -82,13 +83,14 @@
     display: flex;
     flex-direction: column;
     margin-right: 46px;
-    margin-top: 10px;
+    margin-top: 15px;
 
 }
 
 #condiment-row {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 #burger-row {

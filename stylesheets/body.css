@@ -43,6 +43,12 @@ button {
   -moz-appearance: none;
 }
 
+body {
+  background-image: url('../assets/burger-background-2.jpg');
+  /* height: max-content;
+  width: fit-content; */
+}
+
 .hidden {
   display: none;
 }
@@ -93,5 +99,5 @@ button {
   /* margin-right: 100px; */
   color: Black;
   font-size: 88px;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
 }

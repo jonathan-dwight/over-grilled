@@ -24,8 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('intro-container').classList.add('hidden');
     game.addClickToItems();
     game.addClickToClearPlate();
-    setInterval(time, 1000);
-    setInterval(gameStatus, 50);
+    setInterval(time, 1000); // setInterval(gameStatus, 50)
   });
 
   function time() {
@@ -45,6 +44,112 @@ document.addEventListener("DOMContentLoaded", function () {
   } // x, y, width, height
 
 });
+
+/***/ }),
+
+/***/ "./src/burger-order.js":
+/*!*****************************!*\
+  !*** ./src/burger-order.js ***!
+  \*****************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var ITEMS = {
+  beef: "../assets/beef patty.png",
+  bottom_bun: "../assets/bottom bun.jpeg",
+  top_bun: "../assets/top-bun.png"
+};
+var CONDIMENTS = {
+  cheese: "../assets/cheese.png",
+  ketchup: "../assets/ketchup icon.jpg",
+  lettuce: "../assets/salad.png",
+  beef: "../assets/beef patty.png",
+  mustard: "../assets/mustard icon.jpg"
+};
+var ALL_ITEMS = {
+  beef: "../assets/beef patty.png",
+  bottom_bun: "../assets/bottom bun.jpeg",
+  top_bun: "../assets/top-bun.png",
+  cheese: "../assets/cheese.png",
+  ketchup: "../assets/ketchup icon.jpg",
+  lettuce: "../assets/salad.png",
+  mustard: "../assets/mustard icon.jpg"
+};
+
+var BurgerOrder = /*#__PURE__*/function () {
+  function BurgerOrder(numItems) {
+    _classCallCheck(this, BurgerOrder);
+
+    this.numItems = numItems;
+    this.burgerOrder = [];
+    this.orderItem = this.orderItem.bind(this);
+    this.showOrder();
+  }
+
+  _createClass(BurgerOrder, [{
+    key: "order",
+    value: function order() {
+      var options = Object.keys(ITEMS);
+      var condimentsOptions = Object.keys(CONDIMENTS);
+
+      if (this.numItems === 3) {
+        this.burgerOrder.push('top_bun');
+        this.burgerOrder.push('beef');
+        this.burgerOrder.push('bottom_bun');
+      } else {
+        this.burgerOrder.push('top_bun');
+
+        for (var i = 3; i < this.numItems - 1; i++) {
+          var item = Math.floor(Math.random() * 5);
+          this.burgerOrder.push(condimentsOptions[item]);
+        }
+
+        this.burgerOrder.push('beef');
+        this.burgerOrder.push('bottom_bun');
+      }
+    }
+  }, {
+    key: "orderItem",
+    value: function orderItem(item) {
+      var img = document.createElement('img');
+      img.src = ALL_ITEMS[item];
+      img.className = "burger-order";
+      return img;
+    }
+  }, {
+    key: "showOrder",
+    value: function showOrder() {
+      var _this = this;
+
+      this.order();
+      var orderDisplay = document.getElementById('order-window'); // orderDisplay.classList.add('order-options')
+
+      console.log(orderDisplay);
+      this.burgerOrder.forEach(function (item) {
+        var img = _this.orderItem(item);
+
+        orderDisplay.appendChild(img);
+      });
+    }
+  }]);
+
+  return BurgerOrder;
+}();
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BurgerOrder);
 
 /***/ }),
 
@@ -149,6 +254,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./burger */ "./src/burger.js");
+/* harmony import */ var _burger_order__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./burger-order */ "./src/burger-order.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -157,18 +263,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
+
 var Game = /*#__PURE__*/function () {
   function Game() {
     _classCallCheck(this, Game);
 
-    this.burger = new _burger__WEBPACK_IMPORTED_MODULE_0__.default(); // this.order = [];
+    var items = 3;
+    this.burger = new _burger__WEBPACK_IMPORTED_MODULE_0__.default();
+    this.burgerOrder = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default(items); // this.order = [];
 
     this.start = this.start.bind(this);
+    this.addClickToItems = this.addClickToItems.bind(this);
+    this.addClickToClearPlate = this.addClickToClearPlate.bind(this);
   }
 
   _createClass(Game, [{
     key: "start",
-    value: function start() {}
+    value: function start() {
+      this.addClickToItems();
+      this.addClickToClearPlate();
+      this.burgerOrder();
+    }
   }, {
     key: "addClickToItems",
     value: function addClickToItems() {
@@ -190,6 +305,12 @@ var Game = /*#__PURE__*/function () {
       button.addEventListener('click', function () {
         _this2.burger.clearPlate();
       });
+    }
+  }, {
+    key: "gameRound",
+    value: function gameRound() {
+      this.burgerOrder = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default(4);
+      this.burger = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default();
     }
   }]);
 

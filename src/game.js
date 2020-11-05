@@ -1,14 +1,21 @@
 import Burger from './burger'
+import BurgerOrder from "./burger-order"
 
 class Game {
     constructor () {
-        this.burger = new Burger()
+        let items = 3
+        this.burger = new Burger();
+        this.burgerOrder = new BurgerOrder(items)
         // this.order = [];
         this.start = this.start.bind(this)
+        this.addClickToItems = this.addClickToItems.bind(this)
+        this.addClickToClearPlate = this.addClickToClearPlate.bind(this)
     }
 
     start() {
-
+        this.addClickToItems();
+        this.addClickToClearPlate();
+        this.burgerOrder();
     }
 
     addClickToItems() {
@@ -25,6 +32,11 @@ class Game {
         button.addEventListener('click', () => {
             this.burger.clearPlate()
         })
+    }
+
+    gameRound() {
+        this.burgerOrder = new BurgerOrder(4)
+        this.burger = new BurgerOrder()
     }
 }
 

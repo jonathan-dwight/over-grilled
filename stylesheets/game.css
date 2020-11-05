@@ -133,7 +133,7 @@
 
 .burger-item-1 {
     width: 75px;
-    height: 25px;
+    height: 29px;
     background: #FFFFFF;
     border-radius: 8px;
     display: flex;
@@ -141,4 +141,9 @@
     align-items: center;
     position: relative;
     bottom: -35px;
+}
+
+.burger-order {
+    width: 75px;
+    height: 25px;
 }

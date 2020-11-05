@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         game.addClickToItems();
         game.addClickToClearPlate();
         setInterval(time, 1000)
-        setInterval(gameStatus, 50)
+        // setInterval(gameStatus, 50)
     })
 
 

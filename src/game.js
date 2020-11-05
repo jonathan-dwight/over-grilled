@@ -85,13 +85,13 @@ class Game {
             this.burgerOrder = new BurgerOrder(10);
             this.burger = new Burger();
             this.burger.clearPlate();
-        } 
+        } else {
+            this.burgerOrder = new BurgerOrder(10);
+            this.burger = new Burger();
+            this.burger.clearPlate();
+        }
     }
 
-    gameRound() {
-        this.burgerOrder = new BurgerOrder(4)
-        this.burger = new BurgerOrder()
-    }
 }
 
 export default Game

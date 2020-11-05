@@ -371,13 +371,11 @@ var Game = /*#__PURE__*/function () {
         this.burgerOrder = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default(10);
         this.burger = new _burger__WEBPACK_IMPORTED_MODULE_0__.default();
         this.burger.clearPlate();
+      } else {
+        this.burgerOrder = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default(10);
+        this.burger = new _burger__WEBPACK_IMPORTED_MODULE_0__.default();
+        this.burger.clearPlate();
       }
-    }
-  }, {
-    key: "gameRound",
-    value: function gameRound() {
-      this.burgerOrder = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default(4);
-      this.burger = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default();
     }
   }]);
 

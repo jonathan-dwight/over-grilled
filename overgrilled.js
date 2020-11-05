@@ -5,16 +5,23 @@ import Game from "./src/game"
 
 document.addEventListener("DOMContentLoaded", () => {
     let game = new Game()
-    let timer = 60;
+    let timer;
     let isPlaying = true;
 
     let startButton = document.getElementById('start-button')
+    let playAgainButton = document.getElementById('play-again')
     
     startButton.addEventListener('click', () => {
         document.getElementById('intro-container').classList.add('hidden')
         game.start()
+        timer = 60;
         setInterval(time, 1000)
-        // setInterval(gameStatus, 50)
+        setInterval(gameStatus, 50)
+    })
+
+    playAgainButton.addEventListener('click', () => {
+        game.restart();
+        timer = 60;
     })
 
 
@@ -26,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function gameStatus() {
         if (!isPlaying && timer === 0) {
-            window.alert('Game Over')
+            game.endGame()
         }
     }
 

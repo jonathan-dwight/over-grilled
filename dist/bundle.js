@@ -17,13 +17,20 @@ console.log("we connected");
 
 document.addEventListener("DOMContentLoaded", function () {
   var game = new _src_game__WEBPACK_IMPORTED_MODULE_0__.default();
-  var timer = 60;
+  var timer;
   var isPlaying = true;
   var startButton = document.getElementById('start-button');
+  var playAgainButton = document.getElementById('play-again');
   startButton.addEventListener('click', function () {
     document.getElementById('intro-container').classList.add('hidden');
     game.start();
-    setInterval(time, 1000); // setInterval(gameStatus, 50)
+    timer = 60;
+    setInterval(time, 1000);
+    setInterval(gameStatus, 50);
+  });
+  playAgainButton.addEventListener('click', function () {
+    game.restart();
+    timer = 60;
   });
 
   function time() {
@@ -34,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function gameStatus() {
     if (!isPlaying && timer === 0) {
-      window.alert('Game Over');
+      game.endGame();
     }
   }
 
@@ -376,6 +383,21 @@ var Game = /*#__PURE__*/function () {
         this.burger = new _burger__WEBPACK_IMPORTED_MODULE_0__.default();
         this.burger.clearPlate();
       }
+    }
+  }, {
+    key: "restart",
+    value: function restart() {
+      this.burgerOrder["delete"]();
+      this.burgerOrder = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default(3);
+      this.burger.clearPlate();
+      this.score = 0;
+      this.showScore();
+      document.getElementById("modal").classList.add("hidden");
+    }
+  }, {
+    key: "endGame",
+    value: function endGame() {
+      document.getElementById("modal").classList.remove("hidden");
     }
   }]);
 

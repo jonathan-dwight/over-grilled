@@ -51,6 +51,8 @@ class Burger {
             // plate.appendChild(img);
         }
     }
+
+    
 }
 
 export default Burger;

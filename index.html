@@ -25,6 +25,13 @@
     </div>
     
     <div id="modal" class="hidden">
+        <div class="modal-screen"></div>
+        <div class="game-over-screen">
+            <div class="game-over-message"></div>
+
+            <p>SCORE</p>
+            <button id="play-again">PLAY AGAIN</button>
+        </div>
     </div>
 
     <div>
@@ -41,17 +48,18 @@
        <div id="game-container">
             <p class="game-header">Over Grilled</p>
             <div class="game-box">
-                <!-- <div class="timer-score-box"> -->
-                    <span>Time Left:<span id="timer">60</span></span>
-                    <p>Score: <span id="score">0</span></p>
-                    <div class="plate">
-                        <img class="plate-img" src="./assets/plate.png" alt="">
-                    </div>
-                <!-- </div> -->
+                <div class="plate">
+                    <img class="plate-img" src="./assets/plate.png" alt="">
+                </div>
                 
                 <div class="game-window">    
                     <div id="order-creation">
                         <div class="order-header-box">
+                            <div class="timer-header">
+                                <span>Time Left:<span id="timer">60</span></span>
+                                <p>Score: <span id="score">0</span></p>
+
+                            </div>
                             <div id="order-window">
                             </div>
                         </div>

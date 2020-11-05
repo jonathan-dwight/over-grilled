@@ -92,6 +92,19 @@ class Game {
         }
     }
 
+
+    restart() {
+        this.burgerOrder.delete();
+        this.burgerOrder = new BurgerOrder(3)
+        this.burger.clearPlate();
+        this.score = 0;
+        this.showScore();
+
+        document.getElementById("modal").classList.add("hidden")
+    }
+    endGame() {
+        document.getElementById("modal").classList.remove("hidden")
+    }
 }
 
 export default Game

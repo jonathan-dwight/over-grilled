@@ -37,17 +37,17 @@ class BurgerOrder {
         let condimentsOptions = Object.keys(CONDIMENTS)
         
         if (this.numItems === 3) {
-            this.burgerOrder.push('top_bun')
-            this.burgerOrder.push('beef')
             this.burgerOrder.push('bottom_bun')
-        } else {
+            this.burgerOrder.push('beef')
             this.burgerOrder.push('top_bun')
-            for (let i = 3; i < this.numItems-1; i++) {
+        } else {
+            this.burgerOrder.push('bottom_bun')
+            this.burgerOrder.push('beef')
+            for (let i = 3; i < this.numItems; i++) {
                 let item = Math.floor(Math.random() * 5);
                 this.burgerOrder.push(condimentsOptions[item])
             }
-            this.burgerOrder.push('beef')
-            this.burgerOrder.push('bottom_bun')
+            this.burgerOrder.push('top_bun')
         }
 
     }
@@ -63,12 +63,18 @@ class BurgerOrder {
         this.order()
         let orderDisplay = document.getElementById('order-window')
         // orderDisplay.classList.add('order-options')
-        console.log(orderDisplay)
         this.burgerOrder.forEach((item) => {
             let img = this.orderItem(item)
-            orderDisplay.appendChild(img)
+            // orderDisplay.appendChild(img)
+            let theFirstChild = orderDisplay.firstChild
+            orderDisplay.insertBefore(img, theFirstChild);
 
         })
+    }
+
+    delete() {
+        let order = document.getElementById('order-window')
+        order.innerHTML= "";
     }
 }
 

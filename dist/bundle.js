@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var startButton = document.getElementById('start-button');
   startButton.addEventListener('click', function () {
     document.getElementById('intro-container').classList.add('hidden');
-    game.addClickToItems();
-    game.addClickToClearPlate();
+    game.start();
     setInterval(time, 1000); // setInterval(gameStatus, 50)
   });
 
@@ -106,19 +105,19 @@ var BurgerOrder = /*#__PURE__*/function () {
       var condimentsOptions = Object.keys(CONDIMENTS);
 
       if (this.numItems === 3) {
-        this.burgerOrder.push('top_bun');
-        this.burgerOrder.push('beef');
         this.burgerOrder.push('bottom_bun');
-      } else {
+        this.burgerOrder.push('beef');
         this.burgerOrder.push('top_bun');
+      } else {
+        this.burgerOrder.push('bottom_bun');
+        this.burgerOrder.push('beef');
 
-        for (var i = 3; i < this.numItems - 1; i++) {
+        for (var i = 3; i < this.numItems; i++) {
           var item = Math.floor(Math.random() * 5);
           this.burgerOrder.push(condimentsOptions[item]);
         }
 
-        this.burgerOrder.push('beef');
-        this.burgerOrder.push('bottom_bun');
+        this.burgerOrder.push('top_bun');
       }
     }
   }, {
@@ -137,12 +136,19 @@ var BurgerOrder = /*#__PURE__*/function () {
       this.order();
       var orderDisplay = document.getElementById('order-window'); // orderDisplay.classList.add('order-options')
 
-      console.log(orderDisplay);
       this.burgerOrder.forEach(function (item) {
-        var img = _this.orderItem(item);
+        var img = _this.orderItem(item); // orderDisplay.appendChild(img)
 
-        orderDisplay.appendChild(img);
+
+        var theFirstChild = orderDisplay.firstChild;
+        orderDisplay.insertBefore(img, theFirstChild);
       });
+    }
+  }, {
+    key: "delete",
+    value: function _delete() {
+      var order = document.getElementById('order-window');
+      order.innerHTML = "";
     }
   }]);
 
@@ -268,9 +274,10 @@ var Game = /*#__PURE__*/function () {
   function Game() {
     _classCallCheck(this, Game);
 
-    var items = 3;
+    // let items = 3
     this.burger = new _burger__WEBPACK_IMPORTED_MODULE_0__.default();
-    this.burgerOrder = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default(items); // this.order = [];
+    this.burgerOrder = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default(3);
+    this.score = 0; // this.order = [];
 
     this.start = this.start.bind(this);
     this.addClickToItems = this.addClickToItems.bind(this);
@@ -282,7 +289,7 @@ var Game = /*#__PURE__*/function () {
     value: function start() {
       this.addClickToItems();
       this.addClickToClearPlate();
-      this.burgerOrder();
+      this.addClickToSubmitOrder();
     }
   }, {
     key: "addClickToItems",
@@ -305,6 +312,66 @@ var Game = /*#__PURE__*/function () {
       button.addEventListener('click', function () {
         _this2.burger.clearPlate();
       });
+    }
+  }, {
+    key: "addClickToSubmitOrder",
+    value: function addClickToSubmitOrder() {
+      var _this3 = this;
+
+      var submitButton = document.getElementById('submit-order');
+      submitButton.addEventListener('click', function () {
+        _this3.checkGame();
+      });
+    }
+  }, {
+    key: "correctOrder",
+    value: function correctOrder() {
+      return JSON.stringify(this.burgerOrder.burgerOrder) === JSON.stringify(this.burger.burger);
+    }
+  }, {
+    key: "showScore",
+    value: function showScore() {
+      var score = document.getElementById('score');
+      score.innerHTML = "".concat(this.score);
+    }
+  }, {
+    key: "checkGame",
+    value: function checkGame() {
+      if (this.correctOrder()) {
+        this.score += 1;
+        this.showScore();
+        this.newRound();
+      } else {
+        console.log("incorrect order");
+      }
+    }
+  }, {
+    key: "newRound",
+    value: function newRound() {
+      this.burger.clearPlate();
+      this.burger = new _burger__WEBPACK_IMPORTED_MODULE_0__.default();
+      this.burgerOrder["delete"]();
+
+      if (this.score < 1) {
+        this.burgerOrder["delete"]();
+        this.burgerOrder = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default(4);
+      } else if (this.score < 3) {
+        this.burgerOrder = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default(5);
+        this.burger = new _burger__WEBPACK_IMPORTED_MODULE_0__.default();
+        this.burger.clearPlate();
+      } else if (this.score < 6) {
+        this.burgerOrder = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default(7);
+        this.burger = new _burger__WEBPACK_IMPORTED_MODULE_0__.default();
+        this.burger.clearPlate();
+      } else if (this.score < 8) {
+        this.burgerOrder = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default(8);
+        this.burger = new _burger__WEBPACK_IMPORTED_MODULE_0__.default();
+        this.burger.clearPlate();
+      } else if (this.score < 10) {
+        this.burgerOrder = new _burger_order__WEBPACK_IMPORTED_MODULE_1__.default(10);
+        this.burger = new _burger__WEBPACK_IMPORTED_MODULE_0__.default();
+        this.burger.clearPlate();
+      }
     }
   }, {
     key: "gameRound",

@@ -23,12 +23,17 @@
     height: 100%
 }
 
+.order-header-box {
+    display: flex;
+}
+
 #order-window {
     width: 95%;
     border: 1px solid black;
     height: 100%;
     align-self: center;
     margin-top: 20px;
+    height: 302px;
 }
 
 .order-ingredients {

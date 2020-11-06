@@ -1,5 +1,5 @@
 const ITEMS = {
-    beef: "assets/beef patty.png",
+    beef: "assets/beef-patty.png",
     bottom_bun: "assets/bottom-bun.jpeg",
     top_bun: "assets/top-bun1.jpeg"
 }
@@ -14,12 +14,12 @@ const CONDIMENTS = {
 
 const ALL_ITEMS = {
     beef: "assets/beef-patty.png",
-    bottom_bun: ".assets/bottom-bun.jpeg",
-    top_bun: ".assets/top-bun.png",
-    cheese: ".assets/cheese.png",
-    ketchup: ".assets/ketchup-icon.jpg",
-    lettuce: ".assets/salad.png",
-    mustard: ".assets/mustard-icon.jpg",
+    bottom_bun: "assets/bottom-bun.jpeg",
+    top_bun: "assets/top-bun.png",
+    cheese: "assets/cheese.png",
+    ketchup: "assets/ketchup-icon.jpg",
+    lettuce: "assets/salad.png",
+    mustard: "assets/mustard-icon.jpg",
 }
 
 class BurgerOrder {

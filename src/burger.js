@@ -1,11 +1,11 @@
 const BURGER_ITEMS = {
-    cheese: "assets/cheese.png",
-    ketchup: "assets/ketchup icon.jpg",
-    lettuce: "assets/salad.png",
-    mustard: "assets/mustard icon.jpg",
-    beef: "assets/beef patty.png",
-    bottom_bun: "assets/bottom bun.jpeg",
-    top_bun: "assets/top-bun.png"
+    cheese: "../assets/cheese.png",
+    ketchup: "../assets/ketchup icon.jpg",
+    lettuce: "../assets/salad.png",
+    mustard: "../assets/mustard icon.jpg",
+    beef: "../assets/beef patty.png",
+    bottom_bun: "../assets/bottom bun.jpeg",
+    top_bun: "../assets/top-bun.png"
 }
 
 class Burger {
@@ -29,7 +29,7 @@ class Burger {
         let plate = document.getElementsByClassName('plate')[0];
         plate.innerHTML = ""
         let initialImg = document.createElement('img');
-        initialImg.src = "assets/plate.png";
+        initialImg.src = "../assets/plate.png";
         initialImg.className = 'plate-img'
         plate.appendChild(initialImg)
         

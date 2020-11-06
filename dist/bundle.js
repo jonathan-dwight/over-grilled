@@ -73,25 +73,25 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 var ITEMS = {
-  beef: "/assets/beef patty.png",
-  bottom_bun: "/assets/bottom bun.jpeg",
-  top_bun: "/assets/top-bun.png"
+  beef: "../assets/beef patty.png",
+  bottom_bun: "../assets/bottom bun.jpeg",
+  top_bun: "../assets/top-bun.png"
 };
 var CONDIMENTS = {
-  cheese: "/assets/cheese.png",
-  ketchup: "/assets/ketchup icon.jpg",
-  lettuce: "/assets/salad.png",
-  beef: "/assets/beef patty.png",
-  mustard: "/assets/mustard icon.jpg"
+  cheese: "../assets/cheese.png",
+  ketchup: "../assets/ketchup icon.jpg",
+  lettuce: "../assets/salad.png",
+  beef: "../assets/beef patty.png",
+  mustard: "../assets/mustard icon.jpg"
 };
 var ALL_ITEMS = {
-  beef: "/assets/beef patty.png",
-  bottom_bun: "/assets/bottom bun.jpeg",
-  top_bun: "/assets/top-bun.png",
-  cheese: "/assets/cheese.png",
-  ketchup: "/assets/ketchup icon.jpg",
-  lettuce: "/assets/salad.png",
-  mustard: "/assets/mustard icon.jpg"
+  beef: "../assets/beef patty.png",
+  bottom_bun: "../assets/bottom bun.jpeg",
+  top_bun: "../assets/top-bun.png",
+  cheese: "../assets/cheese.png",
+  ketchup: "../assets/ketchup icon.jpg",
+  lettuce: "../assets/salad.png",
+  mustard: "../assets/mustard icon.jpg"
 };
 
 var BurgerOrder = /*#__PURE__*/function () {

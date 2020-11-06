@@ -29,7 +29,7 @@ class Burger {
         let plate = document.getElementsByClassName('plate')[0];
         plate.innerHTML = ""
         let initialImg = document.createElement('img');
-        initialImg.src = "../assets/plate.png";
+        initialImg.src = "assets/plate.png";
         initialImg.className = 'plate-img'
         plate.appendChild(initialImg)
         

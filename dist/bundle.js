@@ -220,7 +220,7 @@ var Burger = /*#__PURE__*/function () {
       var plate = document.getElementsByClassName('plate')[0];
       plate.innerHTML = "";
       var initialImg = document.createElement('img');
-      initialImg.src = "../assets/plate.png";
+      initialImg.src = "assets/plate.png";
       initialImg.className = 'plate-img';
       plate.appendChild(initialImg);
 

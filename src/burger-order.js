@@ -1,25 +1,25 @@
 const ITEMS = {
-    beef: "../assets/beef patty.png",
-    bottom_bun: "../assets/bottom bun.jpeg",
-    top_bun: "../assets/top-bun.png"
+    beef: "/assets/beef patty.png",
+    bottom_bun: "/assets/bottom bun.jpeg",
+    top_bun: "/assets/top-bun.png"
 }
 
 const CONDIMENTS = {
-    cheese: "../assets/cheese.png",
-    ketchup: "../assets/ketchup icon.jpg",
-    lettuce: "../assets/salad.png",
-    beef: "../assets/beef patty.png",
-    mustard: "../assets/mustard icon.jpg",
+    cheese: "/assets/cheese.png",
+    ketchup: "/assets/ketchup icon.jpg",
+    lettuce: "/assets/salad.png",
+    beef: "/assets/beef patty.png",
+    mustard: "/assets/mustard icon.jpg",
 }
 
 const ALL_ITEMS = {
-    beef: "../assets/beef patty.png",
-    bottom_bun: "../assets/bottom bun.jpeg",
-    top_bun: "../assets/top-bun.png",
-    cheese: "../assets/cheese.png",
-    ketchup: "../assets/ketchup icon.jpg",
-    lettuce: "../assets/salad.png",
-    mustard: "../assets/mustard icon.jpg",
+    beef: "/assets/beef patty.png",
+    bottom_bun: "/assets/bottom bun.jpeg",
+    top_bun: "/assets/top-bun.png",
+    cheese: "/assets/cheese.png",
+    ketchup: "/assets/ketchup icon.jpg",
+    lettuce: "/assets/salad.png",
+    mustard: "/assets/mustard icon.jpg",
 }
 
 class BurgerOrder {

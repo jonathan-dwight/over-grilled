@@ -40,8 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function gameStatus() {
-    if (!isPlaying && timer === 0) {
-      game.endGame();
+    if (!isPlaying && timer === 0) {// game.endGame()
     }
   }
 

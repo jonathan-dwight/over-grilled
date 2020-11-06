@@ -28,12 +28,17 @@
 }
 
 #order-window {
-    width: 95%;
     border: 1px solid black;
     height: 100%;
     align-self: center;
-    margin-top: 20px;
-    height: 302px;
+    /* margin-top: 20px; */
+    height: 300px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 628px;
+    justify-content: center;
 }
 
 .order-ingredients {
@@ -136,9 +141,14 @@
   position: relative;
 }
 
+#top_bun {
+  width: 100px;
+  height: 50px;
+}
+
 .burger-item-1 {
-    width: 75px;
-    height: 29px;
+    width: 97px;
+    height: 30px;
     background: #FFFFFF;
     border-radius: 8px;
     display: flex;
@@ -153,11 +163,6 @@
     height: 29px;
 }
 
-#order-window {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .burger-item:hover, #submit-order:hover, #clear-plate:hover{
     top: -5px;
@@ -179,4 +184,12 @@
     margin-left: -250px;
     margin-top: -150px;
     border: 1px solid;
+}
+
+.timer {
+    align-self: center;
+}
+
+.score {
+    align-self: center;
 }

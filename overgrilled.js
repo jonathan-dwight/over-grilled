@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function gameStatus() {
         if (!isPlaying && timer === 0) {
-            game.endGame()
+            // game.endGame()
         }
     }
 

@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function gameStatus() {
-    if (!isPlaying && timer === 0) {// game.endGame()
+    if (!isPlaying && timer === 0) {
+      game.endGame();
     }
   }
 
@@ -107,7 +108,6 @@ var BurgerOrder = /*#__PURE__*/function () {
   _createClass(BurgerOrder, [{
     key: "order",
     value: function order() {
-      var options = Object.keys(ITEMS);
       var condimentsOptions = Object.keys(CONDIMENTS);
 
       if (this.numItems === 3) {
@@ -422,6 +422,9 @@ var Game = /*#__PURE__*/function () {
     key: "endGame",
     value: function endGame() {
       document.getElementById("modal").classList.remove("hidden");
+      var score = this.score;
+      var showScore = document.getElementById('end-game-score');
+      showScore.innerHTML = "You're score is ".concat(score);
     }
   }]);
 

@@ -33,7 +33,6 @@ class BurgerOrder {
     }
 
     order() {
-        let options = Object.keys(ITEMS);
         let condimentsOptions = Object.keys(CONDIMENTS)
         
         if (this.numItems === 3) {

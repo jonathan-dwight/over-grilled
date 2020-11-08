@@ -70,7 +70,7 @@ class Game {
             orderDisplay.appendChild(img)
             this.correctOrderSound()
             setTimeout(this.newRound, 500)
-            
+
         } else {
             let orderDisplay = document.getElementById('order-window')
             let img = document.createElement('img')
@@ -125,6 +125,9 @@ class Game {
     }
     endGame() {
         document.getElementById("modal").classList.remove("hidden")
+        const score = this.score
+        let showScore = document.getElementById('end-game-score')
+        showScore.innerHTML =`You're score is ${score}`
     }
 }
 

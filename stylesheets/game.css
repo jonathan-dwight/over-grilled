@@ -167,7 +167,7 @@
 }
 
 
-.burger-item:hover, #submit-order:hover, #clear-plate:hover, #start-button:hover{
+.burger-item:hover, #submit-order:hover, #clear-plate:hover, #start-button:hover, #play-again:hover{
     top: -5px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;

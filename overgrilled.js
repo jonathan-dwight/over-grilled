@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     startButton.addEventListener('click', () => {
         document.getElementById('intro-container').classList.add('hidden')
         game.start()
-        timer = 60;
+        timer = 3;
         setInterval(time, 1000)
         setInterval(gameStatus, 50)
     })

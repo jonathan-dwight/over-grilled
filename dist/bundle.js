@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   startButton.addEventListener('click', function () {
     document.getElementById('intro-container').classList.add('hidden');
     game.start();
-    timer = 60;
+    timer = 3;
     setInterval(time, 1000);
     setInterval(gameStatus, 50);
   });
@@ -288,6 +288,7 @@ var Game = /*#__PURE__*/function () {
     this.start = this.start.bind(this);
     this.addClickToItems = this.addClickToItems.bind(this);
     this.addClickToClearPlate = this.addClickToClearPlate.bind(this);
+    this.newRound = this.newRound.bind(this);
   }
 
   _createClass(Game, [{
@@ -346,9 +347,25 @@ var Game = /*#__PURE__*/function () {
       if (this.correctOrder()) {
         this.score += 1;
         this.showScore();
-        this.newRound();
+        var orderDisplay = document.getElementById('order-window');
+        var img = document.createElement('img');
+        img.src = 'assets/check-mark.png';
+        img.id = "check-mark";
+        orderDisplay.innerHTML = "";
+        orderDisplay.appendChild(img);
+        setTimeout(this.newRound, 500);
       } else {
-        console.log("incorrect order");
+        var _orderDisplay = document.getElementById('order-window');
+
+        var _img = document.createElement('img');
+
+        _img.src = 'assets/x-mark-picture.png';
+        _img.id = "check-mark";
+        _orderDisplay.innerHTML = "";
+
+        _orderDisplay.appendChild(_img);
+
+        setTimeout(this.newRound, 500);
       }
     }
   }, {

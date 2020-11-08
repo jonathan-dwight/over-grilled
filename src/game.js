@@ -11,6 +11,7 @@ class Game {
         this.start = this.start.bind(this)
         this.addClickToItems = this.addClickToItems.bind(this)
         this.addClickToClearPlate = this.addClickToClearPlate.bind(this)
+        this.newRound = this.newRound.bind(this)
     }
 
     start() {
@@ -55,9 +56,21 @@ class Game {
         if (this.correctOrder()) {
             this.score += 1
             this.showScore();
-            this.newRound();
+            let orderDisplay = document.getElementById('order-window')
+            let img = document.createElement('img')
+            img.src = 'assets/check-mark.png'
+            img.id = "check-mark"
+            orderDisplay.innerHTML = ""
+            orderDisplay.appendChild(img)
+            setTimeout(this.newRound, 500)
         } else {
-            console.log("incorrect order")
+            let orderDisplay = document.getElementById('order-window')
+            let img = document.createElement('img')
+            img.src = 'assets/x-mark-picture.png'
+            img.id = "check-mark"
+            orderDisplay.innerHTML = ""
+            orderDisplay.appendChild(img)
+            setTimeout(this.newRound, 500)
         }
     }
 

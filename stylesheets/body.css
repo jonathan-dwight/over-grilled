@@ -44,9 +44,9 @@ button {
 }
 
 body {
-  background-image: url('../assets/burger-background-2.jpg');
-  /* height: max-content;
-  width: fit-content; */
+  background: url('../assets/background-BBQ-1.jpg');
+  background-size: 100vw;
+  font-family: 'Architects Daughter', cursive;
 }
 
 .hidden {
@@ -107,3 +107,9 @@ body {
   flex-direction: column;
 }
 
+.fab {
+  margin-top: 10px;
+  font-size: 60px;
+  color: white;
+  margin-left: 30px;
+}

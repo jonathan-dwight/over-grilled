@@ -84,8 +84,9 @@ body {
 }
 
 #intro-content h1 {
-    font-size: 38px;
+    font-size: 54px;
     text-align: center;
+    font-weight: bold;
 }
 
 #intro-content p {

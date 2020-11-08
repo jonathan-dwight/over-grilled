@@ -1,6 +1,6 @@
 const ITEMS = {
     beef: "assets/beef-patty.png",
-    bottom_bun: "assets/bottom-bun.jpeg",
+    bottom_bun: "assets/bottom-bun.png",
     top_bun: "assets/top-bun1.jpeg"
 }
 

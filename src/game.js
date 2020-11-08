@@ -51,6 +51,12 @@ class Game {
         let score = document.getElementById('score')
         score.innerHTML = `${this.score}`
     }
+    
+    correctOrderSound() {
+        const serviceBell = new Audio('../assets/service-bell.mp3')
+        serviceBell.volume = .40;
+        serviceBell.play();
+    }
 
     checkGame() {
         if (this.correctOrder()) {
@@ -62,7 +68,9 @@ class Game {
             img.id = "check-mark"
             orderDisplay.innerHTML = ""
             orderDisplay.appendChild(img)
+            this.correctOrderSound()
             setTimeout(this.newRound, 500)
+            
         } else {
             let orderDisplay = document.getElementById('order-window')
             let img = document.createElement('img')
@@ -121,3 +129,46 @@ class Game {
 }
 
 export default Game
+
+// wordsInput.addEventListener("keydown", typeSound);
+// let soundOn = false;
+// sound.addEventListener("click", () => {
+//     if (soundOn === true) {
+//         soundOn = false;
+//         stopMusic();
+//     } else {
+//         soundOn = true;
+//         backgroundMusic();
+//     }
+//     sound.innerHTML === "SOUND is OFF" ? sound.innerHTML = "SOUND is ON" : sound.innerHTML = "SOUND is OFF"
+// });
+// function typeSound() {
+//     const keyPress = new Audio("./assets/typeclick.mp3");
+//     if (soundOn === false) keyPress.muted = true;
+//     keyPress.volume = .20
+//     keyPress.play();
+// };
+// function correctSound() {
+//     const correctWord = new Audio("./assets/winsound.mp3");
+//     if (soundOn === false) correctWord.muted = true;
+//     correctWord.volume = .40
+//     correctWord.play();
+// }
+// function gameOverSound() {
+//     const gameOver = new Audio("./assets/gmover.mp3");
+//     if (soundOn === false) gameOver.muted = true;
+//     gameOver.volume = .20;
+//     gameOver.play();
+// }
+// const gameMusic = new Audio("./assets/gamemusic.mp3");
+// function backgroundMusic() {
+//     if (soundOn === false) gameMusic.muted = true;
+//     if (soundOn === true) gameMusic.muted = false;
+//     gameMusic.volume = .40;
+//     gameMusic.play();
+//     gameMusic.loop = true;
+// }
+// function stopMusic() {
+//     gameMusic.pause();
+//     gameMusic.currentTime = 0;
+// }

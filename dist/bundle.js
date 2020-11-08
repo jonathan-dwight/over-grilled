@@ -74,7 +74,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 var ITEMS = {
   beef: "assets/beef-patty.png",
-  bottom_bun: "assets/bottom-bun.jpeg",
+  bottom_bun: "assets/bottom-bun.png",
   top_bun: "assets/top-bun1.jpeg"
 };
 var CONDIMENTS = {
@@ -191,7 +191,7 @@ var BURGER_ITEMS = {
   lettuce: "assets/salad.png",
   mustard: "assets/mustard-icon.jpg",
   beef: "assets/beef-patty.png",
-  bottom_bun: "assets/bottom-bun.jpeg",
+  bottom_bun: "assets/bottom-bun.png",
   top_bun: "assets/top-bun.png"
 };
 
@@ -342,6 +342,13 @@ var Game = /*#__PURE__*/function () {
       score.innerHTML = "".concat(this.score);
     }
   }, {
+    key: "correctOrderSound",
+    value: function correctOrderSound() {
+      var serviceBell = new Audio('../assets/service-bell.mp3');
+      serviceBell.volume = .40;
+      serviceBell.play();
+    }
+  }, {
     key: "checkGame",
     value: function checkGame() {
       if (this.correctOrder()) {
@@ -353,6 +360,7 @@ var Game = /*#__PURE__*/function () {
         img.id = "check-mark";
         orderDisplay.innerHTML = "";
         orderDisplay.appendChild(img);
+        this.correctOrderSound();
         setTimeout(this.newRound, 500);
       } else {
         var _orderDisplay = document.getElementById('order-window');
@@ -420,7 +428,48 @@ var Game = /*#__PURE__*/function () {
   return Game;
 }();
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Game);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Game); // wordsInput.addEventListener("keydown", typeSound);
+// let soundOn = false;
+// sound.addEventListener("click", () => {
+//     if (soundOn === true) {
+//         soundOn = false;
+//         stopMusic();
+//     } else {
+//         soundOn = true;
+//         backgroundMusic();
+//     }
+//     sound.innerHTML === "SOUND is OFF" ? sound.innerHTML = "SOUND is ON" : sound.innerHTML = "SOUND is OFF"
+// });
+// function typeSound() {
+//     const keyPress = new Audio("./assets/typeclick.mp3");
+//     if (soundOn === false) keyPress.muted = true;
+//     keyPress.volume = .20
+//     keyPress.play();
+// };
+// function correctSound() {
+//     const correctWord = new Audio("./assets/winsound.mp3");
+//     if (soundOn === false) correctWord.muted = true;
+//     correctWord.volume = .40
+//     correctWord.play();
+// }
+// function gameOverSound() {
+//     const gameOver = new Audio("./assets/gmover.mp3");
+//     if (soundOn === false) gameOver.muted = true;
+//     gameOver.volume = .20;
+//     gameOver.play();
+// }
+// const gameMusic = new Audio("./assets/gamemusic.mp3");
+// function backgroundMusic() {
+//     if (soundOn === false) gameMusic.muted = true;
+//     if (soundOn === true) gameMusic.muted = false;
+//     gameMusic.volume = .40;
+//     gameMusic.play();
+//     gameMusic.loop = true;
+// }
+// function stopMusic() {
+//     gameMusic.pause();
+//     gameMusic.currentTime = 0;
+// }
 
 /***/ })
 

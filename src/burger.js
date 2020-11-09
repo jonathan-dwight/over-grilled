@@ -39,7 +39,6 @@ class Burger {
             img.src = BURGER_ITEMS[ingredient];
             img.id = ingredient;
             img.className = 'burger-item-1'
-            // let theFirstChild = plate.firstChild;
             if (i === 0) {
                 let plateImg = document.getElementsByClassName('plate-img')[0]
                 plate.insertBefore(img, plateImg);
@@ -47,8 +46,6 @@ class Burger {
                 let theFirstChild = plate.firstChild
                 plate.insertBefore(img, theFirstChild);
             }
-            // plate.insertBefore(img, theFirstChild)
-            // plate.appendChild(img);
         }
     }
 

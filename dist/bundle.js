@@ -229,7 +229,7 @@ var Burger = /*#__PURE__*/function () {
         var img = document.createElement('img');
         img.src = BURGER_ITEMS[ingredient];
         img.id = ingredient;
-        img.className = 'burger-item-1'; // let theFirstChild = plate.firstChild;
+        img.className = 'burger-item-1';
 
         if (i === 0) {
           var plateImg = document.getElementsByClassName('plate-img')[0];
@@ -237,9 +237,7 @@ var Burger = /*#__PURE__*/function () {
         } else {
           var theFirstChild = plate.firstChild;
           plate.insertBefore(img, theFirstChild);
-        } // plate.insertBefore(img, theFirstChild)
-        // plate.appendChild(img);
-
+        }
       }
     }
   }]);

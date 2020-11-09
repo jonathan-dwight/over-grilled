@@ -86,13 +86,13 @@ var CONDIMENTS = {
   mustard: "assets/mustard-icon.jpg"
 };
 var ALL_ITEMS = {
-  beef: "assets/beef-patty.png",
-  bottom_bun: "assets/bottom-bun.jpeg",
+  beef: "assets/beef-patty-t.png",
+  bottom_bun: "assets/bottom-bun.png",
   top_bun: "assets/top-bun.png",
   cheese: "assets/cheese.png",
-  ketchup: "assets/ketchup-icon.jpg",
+  ketchup: "assets/ketchup-icon.png",
   lettuce: "assets/salad.png",
-  mustard: "assets/mustard-icon.jpg"
+  mustard: "assets/mustard-icon.png"
 };
 
 var BurgerOrder = /*#__PURE__*/function () {
@@ -187,10 +187,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 var BURGER_ITEMS = {
   cheese: "assets/cheese.png",
-  ketchup: "assets/ketchup-icon.jpg",
+  ketchup: "assets/ketchup-icon.png",
   lettuce: "assets/salad.png",
-  mustard: "assets/mustard-icon.jpg",
-  beef: "assets/beef-patty.png",
+  mustard: "assets/mustard-icon.png",
+  beef: "assets/beef-patty-t.png",
   bottom_bun: "assets/bottom-bun.png",
   top_bun: "assets/top-bun.png"
 };
@@ -359,8 +359,8 @@ var Game = /*#__PURE__*/function () {
         img.src = 'assets/check-mark.png';
         img.id = "check-mark";
         orderDisplay.innerHTML = "";
-        orderDisplay.appendChild(img);
-        this.correctOrderSound();
+        orderDisplay.appendChild(img); // this.correctOrderSound()
+
         setTimeout(this.newRound, 500);
       } else {
         var _orderDisplay = document.getElementById('order-window');
@@ -424,7 +424,7 @@ var Game = /*#__PURE__*/function () {
       document.getElementById("modal").classList.remove("hidden");
       var score = this.score;
       var showScore = document.getElementById('end-game-score');
-      showScore.innerHTML = "You're score is ".concat(score);
+      showScore.innerHTML = "Your score was ".concat(score);
     }
   }]);
 

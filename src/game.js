@@ -68,7 +68,7 @@ class Game {
             img.id = "check-mark"
             orderDisplay.innerHTML = ""
             orderDisplay.appendChild(img)
-            this.correctOrderSound()
+            // this.correctOrderSound()
             setTimeout(this.newRound, 500)
 
         } else {
@@ -127,7 +127,7 @@ class Game {
         document.getElementById("modal").classList.remove("hidden")
         const score = this.score
         let showScore = document.getElementById('end-game-score')
-        showScore.innerHTML =`You're score is ${score}`
+        showScore.innerHTML =`Your score was ${score}`
     }
 }
 

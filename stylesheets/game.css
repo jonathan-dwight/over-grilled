@@ -1,6 +1,6 @@
 #game-container {
     width: 900px;
-    height: 650px;
+    height: 665px;
     border: 2px solid black;
     position: relative;
     left: 19%;
@@ -117,8 +117,9 @@
 #burger {
     display: flex;
     flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 8px;
     margin-right: 46px;
-    margin-top: 15px;
 
 }
 
@@ -143,16 +144,16 @@
   align-items: center;
   position: relative;
 }
-
+/* 
 #top_bun {
   width: 100px;
   height: 50px;
-}
+} */
 
 .burger-item-1 {
     width: 97px;
     height: 30px;
-    background: #FFFFFF;
+    /* background: wheat; */
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
@@ -179,14 +180,19 @@
     background: white;
     border-radius: 10px;
     font-size: 20px;
-    width: 52%;
-    height: 39%;
-    left: 41%;
-    top: 50%;
+    width: 21%;
+    height: 16%;
+    left: 59%;
+    top: 56%;
     bottom: 50px;
     margin-left: -250px;
     margin-top: -150px;
     border: 1px solid;
+}
+
+#end-game-score {
+    text-align: center;
+    margin-top: 10px;
 }
 
 .timer {

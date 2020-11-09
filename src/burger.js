@@ -1,9 +1,9 @@
 const BURGER_ITEMS = {
     cheese: "assets/cheese.png",
-    ketchup: "assets/ketchup-icon.jpg",
+    ketchup: "assets/ketchup-icon.png",
     lettuce: "assets/salad.png",
-    mustard: "assets/mustard-icon.jpg",
-    beef: "assets/beef-patty.png",
+    mustard: "assets/mustard-icon.png",
+    beef: "assets/beef-patty-t.png",
     bottom_bun: "assets/bottom-bun.png",
     top_bun: "assets/top-bun.png"
 }

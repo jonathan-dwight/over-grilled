@@ -13,13 +13,13 @@ const CONDIMENTS = {
 }
 
 const ALL_ITEMS = {
-    beef: "assets/beef-patty.png",
-    bottom_bun: "assets/bottom-bun.jpeg",
+    beef: "assets/beef-patty-t.png",
+    bottom_bun: "assets/bottom-bun.png",
     top_bun: "assets/top-bun.png",
     cheese: "assets/cheese.png",
-    ketchup: "assets/ketchup-icon.jpg",
+    ketchup: "assets/ketchup-icon.png",
     lettuce: "assets/salad.png",
-    mustard: "assets/mustard-icon.jpg",
+    mustard: "assets/mustard-icon.png",
 }
 
 class BurgerOrder {

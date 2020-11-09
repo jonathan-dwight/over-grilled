@@ -91,6 +91,7 @@ body {
 
 #intro-content p {
   text-align: center;
+  
 }
 
 #start-button {
@@ -104,7 +105,8 @@ body {
   position: relative;
   width: 150px;
   margin-bottom: 30px;
-  margin-left: 30px;
+  margin-left: 9px;
+  margin-top: 27px;
 }
 
 .logo-container {
@@ -122,7 +124,8 @@ body {
 .game-header {
   text-align: center;
   /* margin-right: 100px; */
-  color: Black;
+  /* color: #847979; */
+  color: #4d4747;
   font-size: 88px;
   /* padding-bottom: 10px; */
 }
@@ -152,4 +155,55 @@ body {
   margin-bottom: 30px;
   margin-left: 63px;
   margin-top: 10px
+}
+
+.instructions-pic {
+    height: 100px;
+    width: 100px;
+}
+
+.instructions-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.instructions-box-1 {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: center;
+}
+
+.instructions-box-1 p {
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.instructions-box-2 {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: center;
+}
+
+.instructions-box-2 p {
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.instructions-box-3 {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: center;
+}
+
+.instructions-box-3 p {
+  font-weight: 900;
+  margin-bottom: 10px;
+  /* font-family: 'Comfortaa', cursive;
+  font-family: 'Source Code Pro', monospace; */
+  /* font-family: 'Source Code Pro', monospace; */
+  /* font-weight: 900; */
 }

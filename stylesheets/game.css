@@ -77,7 +77,7 @@
   height: 30px;
   border-radius: 4px;
   background: #16df5f;
-  color: black;
+  color: #4d4747;
   font-size: 19px;
   text-align: center;
   position: relative;
@@ -91,7 +91,7 @@
   height: 30px;
   border-radius: 4px;
   background: #ff2f41;
-  color: black;
+  color: #4d4747;
   font-size: 19px;
   text-align: center;
   position: relative;
@@ -143,6 +143,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  margin-right: 7px;
 }
 /* 
 #top_bun {
@@ -198,14 +199,16 @@
 .timer {
     align-self: center;
     font-size: 23px;
-    font-weight: 700;
+    font-weight: 900;
+    color: #4d4747;
 }
 
 .score {
     align-self: center;
     font-size: 23px;
-    font-weight: 700;
+    font-weight: 900;
     margin-left: 30px;
+    color: #4d4747;
 }
 
 #check-mark {

@@ -116,6 +116,11 @@ body {
   align-self: center;
 }
 
+.logo-icon-container {
+  display: flex;
+  align-items: center;
+  margin-left: 31%;
+}
 .logo-icon img {
   height: 100px;
   width: 100px
@@ -153,7 +158,7 @@ body {
   position: relative;
   width: 150px;
   margin-bottom: 30px;
-  margin-left: 63px;
+  margin-left: 167px;
   margin-top: 10px
 }
 
@@ -178,6 +183,7 @@ body {
 .instructions-box-1 p {
   font-weight: 900;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .instructions-box-2 {
@@ -190,6 +196,7 @@ body {
 .instructions-box-2 p {
   font-weight: 900;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .instructions-box-3 {
@@ -202,6 +209,7 @@ body {
 .instructions-box-3 p {
   font-weight: 900;
   margin-bottom: 10px;
+  font-size: 18px;
   /* font-family: 'Comfortaa', cursive;
   font-family: 'Source Code Pro', monospace; */
   /* font-family: 'Source Code Pro', monospace; */

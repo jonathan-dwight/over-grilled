@@ -176,7 +176,7 @@
 }
 
 .game-over-screen {
-    z-index: 999;
+    /* z-index: 999;
     position: fixed;
     background: white;
     border-radius: 10px;
@@ -188,14 +188,34 @@
     bottom: 50px;
     margin-left: -250px;
     margin-top: -150px;
+    border: 1px solid; */
+    z-index: 999;
+    position: fixed;
+    background: white;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 35%;
+    /* height: 27%; */
+    height: 33%;
+    left: 50%;
+    top: 54%;
+    bottom: 50px;
+    margin-left: -250px;
+    margin-top: -150px;
     border: 1px solid;
+    padding: 23px;
 }
 
 #end-game-score {
     text-align: center;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    font-size: 36px;
 }
 
+.game-over-screen p {
+    font-size: 17px;
+    text-align: center;
+}
 .timer {
     align-self: center;
     font-size: 23px;

@@ -24,13 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
   startButton.addEventListener('click', function () {
     document.getElementById('intro-container').classList.add('hidden');
     game.start();
-    timer = 3;
+    timer = 60;
     setInterval(time, 1000);
     setInterval(gameStatus, 50);
   });
   playAgainButton.addEventListener('click', function () {
     game.restart();
-    timer = 60;
+    timer = 61;
   });
 
   function time() {

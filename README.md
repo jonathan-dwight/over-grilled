@@ -17,6 +17,8 @@ Live Link: [Over Grilled](https://jonathan-dwight.github.io/over-grilled/)
 
 * Users can click on images of the burger item to place it on the plate and try to match it from the grill window by clicking order up
 
+![image](https://github.com/jonathan-dwight/over-grilled/blob/main/assets/instructions.png)
+
 [![Image from Gyazo](https://i.gyazo.com/0636edba823066ba70c47728563b51f8.gif)](https://gyazo.com/0636edba823066ba70c47728563b51f8)
 
 

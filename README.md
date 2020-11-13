@@ -64,4 +64,4 @@ show() {
 ## Future Implementations
 
 * Finish adding sounds and music to application
-* Allowing users to use the keys from the keyboard to play instead of just mouse interactions
+* Allowing users to use keyboard keys to play instead of just mouse interactions
